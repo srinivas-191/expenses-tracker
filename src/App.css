@@ -28,44 +28,45 @@ body {
   margin-bottom: 20px;
   color: #fff;
   text-decoration: none;
-  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+  background: linear-gradient(135deg, #7cf436 0%, #d6e535 50%, #3fd32f 100%);
   padding: 12px 20px;
   border-radius: 25px;
   font-weight: 500;
   transition: all 0.4s ease;
-  box-shadow: 0 4px 15px rgba(255,154,158,0.4);
-  animation: pulse 2s infinite;
+  box-shadow: 0 4px 15px rgba(244,67,54,0.4);
 }
 
 .back-link:hover {
-  background: linear-gradient(135deg, #fecfef 0%, #ff9a9e 50%, #ff9a9e 100%);
+  background: linear-gradient(135deg, #a4d32f 0%, #65f436 50%, #b9e535 100%);
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 20px rgba(255,154,158,0.6);
+  box-shadow: 0 6px 20px rgba(244,67,54,0.6);
 }
 
 /* Home Page */
 .home {
   text-align: center;
   padding: 50px 20px;
-  animation: fadeInUp 1s ease-out;
+  animation: slideDownBounce 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .home h1 {
   font-size: 3em;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, #fff 0%, #f0f8ff 50%, #e6e6fa 100%);
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #43e97b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  animation: bounceIn 1.5s ease-out;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 .home p {
   font-size: 1.2em;
   margin-bottom: 30px;
   color: #e0e0e0;
-  animation: fadeIn 2s ease-out;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 .home nav {
@@ -78,100 +79,105 @@ body {
 .home nav a {
   color: #fff;
   text-decoration: none;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 50%, #4facfe 100%);
   padding: 15px 30px;
   border-radius: 30px;
   font-size: 1.1em;
-  font-weight: 600;
+  font-weight: 700;
   transition: all 0.4s ease;
-  box-shadow: 0 4px 15px rgba(102,126,234,0.4);
-  animation: zoomIn 2.5s ease-out;
+  box-shadow: 0 4px 15px rgba(245,87,108,0.4);
 }
 
 .home nav a:hover {
-  background: linear-gradient(135deg, #f093fb 0%, #667eea 50%, #764ba2 100%);
+  background: linear-gradient(135deg, #4facfe 0%, #f093fb 50%, #f5576c 100%);
   transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 8px 25px rgba(102,126,234,0.6);
+  box-shadow: 0 8px 25px rgba(245,87,108,0.6);
 }
 
 /* Expenses Page */
 .expenses {
-  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.15) 100%);
-  padding: 30px;
+  background: linear-gradient(135deg, rgba(100, 200, 255, 0.15) 0%, rgba(50, 100, 200, 0.08) 50%, rgba(100, 200, 255, 0.15) 100%);
+  padding: 30px 20px;
   border-radius: 20px;
   backdrop-filter: blur(20px);
-  animation: slideInLeft 1s ease-out;
+  animation: slideInDown 1s ease-out;
 }
 
 .expenses h1 {
   text-align: center;
   margin-bottom: 30px;
   font-size: 2.5em;
-  background: linear-gradient(135deg, #fff 0%, #add8e6 50%, #dda0dd 100%);
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #43e97b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  animation: fadeInDown 1.2s ease-out;
+  font-weight: 800;
 }
 
 .expense-form {
   display: flex;
+  flex-direction: column;
   gap: 15px;
   margin-bottom: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
   animation: fadeInUp 1.5s ease-out;
 }
 
 .expense-form input,
 .expense-form select,
 .expense-form button {
-  padding: 12px;
+  padding: 14px 16px;
   border: none;
   border-radius: 15px;
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .expense-form input,
 .expense-form select {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   color: #333;
-  flex: 1;
-  min-width: 150px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-weight: 500;
+}
+
+.expense-form input::placeholder {
+  color: #999;
+  font-weight: 400;
 }
 
 .expense-form input:focus,
 .expense-form select:focus {
   outline: none;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(79, 172, 254, 0.8);
   transform: scale(1.02);
+  background: #fff;
 }
 
 .expense-form button {
-  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 50%, #96ceb4 100%);
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #43e97b 100%);
   color: white;
   cursor: pointer;
-  padding: 12px 25px;
-  font-weight: 600;
-  box-shadow: 0 4px 15px rgba(78,205,196,0.4);
-  animation: pulse 3s infinite;
+  padding: 14px 25px;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+  letter-spacing: 0.5px;
 }
 
 .expense-form button:hover {
-  background: linear-gradient(135deg, #96ceb4 0%, #4ecdc4 50%, #44a08d 100%);
+  background: linear-gradient(135deg, #43e97b 0%, #4facfe 50%, #00f2fe 100%);
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 6px 20px rgba(78,205,196,0.6);
+  box-shadow: 0 6px 20px rgba(79, 172, 254, 0.6);
 }
 
 .expenses-list h2 {
   margin-bottom: 20px;
   color: #fff;
   text-align: center;
-  animation: fadeIn 2s ease-out;
+  font-weight: 700;
+  font-size: 1.8em;
 }
 
 .expenses-list ul {
@@ -181,20 +187,19 @@ body {
 
 .expense-item {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 15px;
   padding: 20px;
   border-radius: 15px;
   margin-bottom: 15px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.2) 100%);
+  background: linear-gradient(135deg, rgba(79, 172, 254, 0.2) 0%, rgba(0, 242, 254, 0.1) 50%, rgba(79, 172, 254, 0.2) 100%);
   backdrop-filter: blur(10px);
   transition: all 0.4s ease;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  animation: slideInRight 1s ease-out;
 }
 
 .expense-item:hover {
-  background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.3) 100%);
+  background: linear-gradient(135deg, rgba(79, 172, 254, 0.3) 0%, rgba(0, 242, 254, 0.15) 50%, rgba(79, 172, 254, 0.3) 100%);
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
@@ -211,10 +216,12 @@ body {
   border: none;
   padding: 12px 24px;
   border-radius: 12px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   box-shadow: 0 6px 18px rgba(255,107,107,0.3);
   transition: all 0.3s ease;
+  width: 100%;
+  max-width: 200px;
 }
 
 .clear-button:hover {
@@ -229,15 +236,16 @@ body {
 }
 
 .description {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
   color: #fff;
+  letter-spacing: 0.3px;
 }
 
 .category {
   color: #b8d4f0;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .date {
@@ -249,12 +257,13 @@ body {
 .expense-amount {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 15px;
 }
 
 .expense-amount span {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 800;
   color: #ffeb3b;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
@@ -268,7 +277,7 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(244,67,54,0.4);
-  animation: shake 4s infinite;
+  font-weight: 600;
 }
 
 .expense-amount button:hover {
@@ -279,55 +288,56 @@ body {
 
 /* Tracker Page */
 .tracker {
-  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.15) 100%);
-  padding: 30px;
+  background: linear-gradient(135deg, rgba(255, 150, 100, 0.15) 0%, rgba(200, 100, 50, 0.08) 50%, rgba(255, 150, 100, 0.15) 100%);
+  padding: 30px 20px;
   border-radius: 20px;
   backdrop-filter: blur(20px);
-  animation: slideInUp 1s ease-out;
+  animation: bounceInUp 1.2s ease-out;
 }
 
 .tracker h1 {
   text-align: center;
   margin-bottom: 30px;
   font-size: 2.5em;
-  background: linear-gradient(135deg, #fff 0%, #ffb6c1 50%, #ffa07a 100%);
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #43e97b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  animation: fadeInDown 1.2s ease-out;
+  font-weight: 800;
 }
 
 .total {
-  background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.25) 100%);
+  background: linear-gradient(135deg, rgba(255, 150, 100, 0.25) 0%, rgba(255, 100, 50, 0.15) 50%, rgba(255, 150, 100, 0.25) 100%);
   padding: 20px;
   border-radius: 15px;
   margin-bottom: 30px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  animation: zoomIn 1.5s ease-out;
 }
 
 .total h2 {
   margin: 0;
   font-size: 2em;
   color: #ffeb3b;
-  font-weight: 700;
+  font-weight: 800;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  letter-spacing: 1px;
 }
 
 .top-categories {
-  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.2) 100%);
+  background: linear-gradient(135deg, rgba(255, 150, 100, 0.2) 0%, rgba(200, 100, 50, 0.1) 50%, rgba(255, 150, 100, 0.2) 100%);
   padding: 20px;
   border-radius: 15px;
-  animation: fadeInUp 2s ease-out;
 }
 
 .top-categories h2 {
   margin-bottom: 20px;
   color: #fff;
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.8em;
+  letter-spacing: 0.5px;
 }
 
 .top-categories ul {
@@ -342,32 +352,32 @@ body {
   padding: 15px;
   border-radius: 12px;
   margin-bottom: 10px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.15) 100%);
+  background: linear-gradient(135deg, rgba(255, 150, 100, 0.15) 0%, rgba(200, 100, 50, 0.08) 50%, rgba(255, 150, 100, 0.15) 100%);
   transition: all 0.4s ease;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  animation: slideInLeft 1s ease-out;
 }
 
 .category-item:hover {
-  background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.25) 100%);
+  background: linear-gradient(135deg, rgba(255, 150, 100, 0.25) 0%, rgba(200, 100, 50, 0.15) 50%, rgba(255, 150, 100, 0.25) 100%);
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .category-item.highlight {
-  background: linear-gradient(135deg, rgba(255,165,0,0.4) 0%, rgba(255,140,0,0.3) 50%, rgba(255,165,0,0.4) 100%);
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.4) 0%, rgba(255, 140, 0, 0.3) 50%, rgba(255, 165, 0, 0.4) 100%);
   border-left: 5px solid #ff9800;
   box-shadow: 0 4px 15px rgba(255,165,0,0.3);
 }
 
 .category-name {
-  font-weight: 600;
+  font-weight: 700;
   color: #fff;
+  font-size: 1.1em;
 }
 
 .category-amount {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 800;
   color: #ffeb3b;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
@@ -380,15 +390,27 @@ body {
   }
 
   .home h1 {
-    font-size: 2.5em;
+    font-size: 2.2em;
   }
 
   .home nav {
     flex-direction: column;
   }
 
+  .home nav a {
+    width: 100%;
+    animation: slideInUp 1s ease-out;
+  }
+
   .expense-form {
     flex-direction: column;
+  }
+
+  .expense-form input,
+  .expense-form select,
+  .expense-form button {
+    width: 100%;
+    padding: 14px 16px;
   }
 
   .expense-item {
@@ -397,21 +419,136 @@ body {
     gap: 10px;
   }
 
+  .expense-amount {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .expense-amount button {
+    width: 100%;
+  }
+
   .category-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
   }
+
+  .clear-row {
+    justify-content: center;
+  }
+
+  .clear-button {
+    width: 100%;
+  }
+
+  .tracker h1 {
+    font-size: 2em;
+  }
+
+  .total h2 {
+    font-size: 1.5em;
+  }
 }
 
-/* Custom Animations */
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+@media (max-width: 480px) {
+  .app {
+    padding: 10px;
+  }
+
+  .expenses {
+    padding: 15px 10px;
+  }
+
+  .expenses h1,
+  .tracker h1 {
+    font-size: 1.8em;
+  }
+
+  .home h1 {
+    font-size: 1.8em;
+  }
+
+  .home p {
+    font-size: 1em;
+  }
+
+  .expense-form {
+    gap: 12px;
+  }
+
+  .expense-item {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .clear-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .category-item {
+    padding: 12px;
+  }
 }
 
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
-  20%, 40%, 60%, 80% { transform: translateX(2px); }
+/* Custom Animations - Keep only essential ones */
+@keyframes slideDownBounce {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

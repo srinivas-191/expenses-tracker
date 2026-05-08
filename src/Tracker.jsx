@@ -34,7 +34,7 @@ const Tracker = () => {
 
   return (
     <div className="tracker" data-aos="fade-in">
-      <h1 data-aos="fade-down">Expense Tracker</h1>
+      <h1 data-aos="fade-down">Total Expenses Tracker</h1>
       <Link to="/" className="back-link">Back to Home</Link>
 
       <div className="total" data-aos="fade-up">
