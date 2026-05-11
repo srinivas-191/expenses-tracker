@@ -447,6 +447,12 @@ body {
   font-size: 1.8em;
 }
 
+.all-expenses ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
 .expense-summary-item {
   display: flex;
   flex-direction: column;
@@ -671,6 +677,9 @@ body {
 
   .total h2 {
     font-size: 1.5em;
+  }
+  .chart-section{
+    display: block;
   }
 }
 
